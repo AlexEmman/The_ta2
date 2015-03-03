@@ -1,0 +1,21 @@
+<h1>Enrollments</h1>
+
+<%= form_for([@enrollment]) do |f| %>
+  <h3>student</h3>
+    <%= select(:enrollment, :student_id, options_for_select(@student_options)) %><hr/>
+
+  <h3>teacher</h3>
+    <%= select(:enrollment, :teacher_id, options_for_select(@teacher_options)) %><hr/>
+
+  <h3>course</h3>
+    <%= select(:enrollment, :course_id, options_for_select(@course_options)) %><hr/>
+
+  <h3>points</h3>
+  <%#= f.text_field :teacher_id, placeholder: "teacher_id" %>
+  <%#= f.text_field :student_id, placeholder: "student_id" %>
+  <%#= f.text_field :course_id, placeholder: "course_id" %>
+    <%= f.text_field :points, placeholder: "points" %><hr/>
+ 
+    <%= f.submit %>
+<% end %>
+

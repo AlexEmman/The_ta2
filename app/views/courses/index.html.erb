@@ -1,0 +1,12 @@
+<h1>Courses#index</h1>
+
+<p>Find me in app/views/courses/index.html.erb</p>
+<% @courses.each do |course| %>
+  <div>
+    <%= link_to(course.name, course_path(course.id)) %>
+    <p><%= link_to('edit', edit_course_path(course.id)) %></p>
+    <p><%= link_to('delete', course_path(course.id), method: :delete) %></p>
+  </div>
+  <hr>
+  
+<% end %>

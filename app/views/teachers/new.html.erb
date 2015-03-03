@@ -1,0 +1,24 @@
+<h1>New TA Account</h1>
+
+<%= form_for(@teacher) do |f| %>
+<div>
+  <%= f.text_field :first_name, placeholder: "first_name" %>
+</div>
+
+<div>
+  <%= f.text_field :last_name, placeholder: "last_name" %>
+</div>
+
+<div>
+  <%= f.text_field :email, placeholder: "email" %>
+</div>
+
+<div>
+  <%= f.password_field :password, placeholder: "password" %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+
+<% end %>

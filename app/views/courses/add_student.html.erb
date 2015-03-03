@@ -1,0 +1,22 @@
+
+
+<% students.each do |student| %>
+  <%= student.first_name%>
+  <%= student.id%>
+<% end %>
+
+<%= course.name %>
+
+<%= form_for([@course, course.students.build]) do |f| %>
+  <%= f.text_field :first_name, placeholder: "First name" %>
+  <%= f.text_field :last_name, placeholder: "Last name" %>
+
+  <% for student in students %>
+    <% fields_for student do |ff| %>
+      <%= ff.text_field :first_name, placeholder: "First name" %>
+      <%= ff.text_field :last_name, placeholder: "Last name" %>
+      <%= ff.submit %>
+    <% end %>  
+  <% end %>
+  <%= f.submit %>
+<% end %>

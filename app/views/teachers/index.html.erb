@@ -1,0 +1,14 @@
+<h1>Teachers Log In</h1>
+<%= form_for :teacher, url: "/sessions", method: "post" do |f| %>
+
+  <div>
+    <%= f.text_field :email, placeholder: "Email"%>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "Password"%>
+  </div>
+  <div>
+    <%= f.submit "Log In"%>
+  </div>
+	<P>Create Account <a href="teachers/new">Register</a></P>
+<% end %>

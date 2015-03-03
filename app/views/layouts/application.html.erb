@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaAssociations</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header" style="text-align: center; color: white;">
+<a href="/">Main Page</a>
+<a href="/students/new">New Student</a>
+<a href="/courses/new">New Course</a>
+<a href="/enrollments/new">New Enrollment</a>
+<a href="courses">All Courses</a>
+
+</div>
+<%= yield %>
+
+</body>
+</html>

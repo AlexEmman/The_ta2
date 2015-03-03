@@ -1,0 +1,14 @@
+<h1>Log in</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_for :teacher, url: "/sessions", method: "post" do |f| %>
+
+  <div>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.text_field :password %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

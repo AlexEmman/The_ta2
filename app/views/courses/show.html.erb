@@ -1,0 +1,29 @@
+<h1>Courses#show</h1>
+<p>Find me in app/views/courses/show.html.erb</p>
+
+
+<h1><%= @course.name %></h1>
+
+<% @enrollments.each do |enrollment| %>
+  <div>
+    <%= link_to(enrollment.student.first_name, edit_student_path(enrollment.student.id)) %>
+    <span><%= enrollment.points %></span>
+  </div>
+
+  <div>
+     <%= link_to('Edit Points', edit_enrollment_path(enrollment.id)) %>
+  </div>
+  <div>
+    <%= link_to('Edit Student', edit_student_path(enrollment.student.id)) %>
+  </div>
+  
+  <hr>
+<% end %>
+
+
+<%# @enrolled_students.each do |student| %>
+  <%# student.enrollment %>
+  <%# link_to(student.first_name, edit_student_path(student.id)) %>
+  <%#link_to(student.first_name, student_path(student.id), method: :delete) %>
+  <%# link_to(student.first_name, edit_enrollment_path(student.id)) %>
+<%# end %>
